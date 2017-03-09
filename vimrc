@@ -1,0 +1,68 @@
+set tabstop=4
+set nu
+set shiftwidth=4
+set noexpandtab
+set showmatch
+set hlsearch
+set laststatus=2
+set ignorecase
+set autoindent
+set incsearch
+set textwidth=80
+:syntax on
+"autocmd BufRead *.tex set formatoptions=q
+autocmd BufRead *.tex set tabstop=2
+autocmd BufRead *.tex set shiftwidth=2
+autocmd BufRead *.tex set expandtab
+autocmd BufRead *.txt set formatoptions=q
+autocmd BufRead *.htm* set formatoptions=q
+autocmd BufRead *.bib set textwidth=1024
+autocmd BufRead *.py set expandtab
+if exists('&colorcolumn')
+	set colorcolumn=+1
+endif
+
+" encoding "
+set encoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,sjis,Shift_JIS,iso-2022-jp-3,ucs-bom,eucjp-ms,euc-jisx0213,euc-jp
+
+" set ctags "
+set tags=./tags,./TAGS,../tags,../TAGS,../../tags,../../TAGS,../../../tags,../../../TAGS
+set tags+=tags;
+
+" zenkaku-space "
+function! ZenkakuSpace()
+	highlight ZenkakuSpace cterm=underline ctermfg=darkgrey gui=underline guifg=darkgrey
+endfunction
+
+if has('syntax')
+	augroup ZenkakuSpace
+		autocmd!
+		autocmd VimEnter,WinEnter * match ZenkakuSpace /¡¡/
+		autocmd VimEnter,WinEnter * match ZenkakuSpace '\%u3000'
+	augroup END
+	call ZenkakuSpace()
+endif
+
+" search result display on center "
+nmap n nzz
+nmap N Nzz
+nmap * *zz
+nmap g* g*zz
+nmap G# G#zz
+
+" binary mode "
+augroup Binary
+	au!
+	au BufReadPre	*.bin let &binary=1
+	au BufReadPost	* if &binary | silent %!xxd -g 1
+	au BufReadPost	* set ft=xxd | endif
+	au BufWritePre	* if &binary | %!xxd -r | endif
+	au BufWritePost	* if &binary | silent %!xxd -g 1
+	au BufWritePost	* set nomod | endif
+augroup END
+
+" visual search "
+vnoremap * "zy:let @/ = @z<CR>n
+set ts=4
+set sw=4
