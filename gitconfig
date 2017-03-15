@@ -1,0 +1,9 @@
+[user]
+	name = H.shishido
+	email = shishido_h0711@keio.jp
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	cm = commit
