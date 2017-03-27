@@ -1,6 +1,6 @@
 dir=~/dotfiles
 older=~/dotfiles_old
-files="vimrc, gitconfig"
+files="vimrc gitconfig"
 
 # Create dotfiles_old in homedir
 
