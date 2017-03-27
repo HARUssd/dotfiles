@@ -2,6 +2,6 @@
 
 There are several dot files.
 if you want to these files import to your PC, 
-please run 'dotfilelink.sh'.
+please run 'run.sh', please type folloing command in your home dir:
 
-$sh dotfilelink.sh
+$sh ~/dotfiles/run.sh
