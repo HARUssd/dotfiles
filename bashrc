@@ -22,4 +22,4 @@ alias cddd="cd ../.."
 alias resp25='ssh -X shishido@resp25.rt.k2.keio.ac.jp'
 alias rresp25='ssh -X shishido@192.168.10.27'
 alias rnyresp38='ssh -X shishido@192.168.11.40'
-alias ssh='ssh -X'
+alias sshx='ssh -X'
