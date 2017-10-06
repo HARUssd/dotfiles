@@ -7,10 +7,7 @@ set hlsearch
 set laststatus=2
 set ignorecase
 set autoindent
-set incsearch
-set textwidth=80
-colorscheme molokai
-colorscheme elflord
+set incs1uuSETuuuuuu textwidth=80
 :syntax on
 "autocmd BufRead *.tex set formatoptions=q
 autocmd BufRead *.tex set tabstop=2
@@ -20,7 +17,6 @@ autocmd BufRead *.txt set formatoptions=q
 autocmd BufRead *.htm* set formatoptions=q
 autocmd BufRead *.bib set textwidth=1024
 autocmd BufRead *.py set expandtab
-autocmd BufRead *.sh colorscheme molokai
 if exists('&colorcolumn')
 	set colorcolumn=+1
 endif
@@ -41,7 +37,7 @@ endfunction
 if has('syntax')
 	augroup ZenkakuSpace
 		autocmd!
-		autocmd VimEnter,WinEnter * match ZenkakuSpace /¡¡/
+		autocmd VimEnter,WinEnter * match ZenkakuSpace /ã€€/
 		autocmd VimEnter,WinEnter * match ZenkakuSpace '\%u3000'
 	augroup END
 	call ZenkakuSpace()
@@ -69,5 +65,3 @@ augroup END
 vnoremap * "zy:let @/ = @z<CR>n
 set ts=4
 set sw=4
-
-hi Comment ctermfg=lightblue
