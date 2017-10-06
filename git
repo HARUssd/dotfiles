@@ -1,0 +1,14 @@
+add: vim colors
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch test
+# Changes to be committed:
+#	new file:   .vim/.netrwhist
+#	new file:   .vim/colors/hybrid.vim
+#	new file:   .vim/colors/jellybeans.vim
+#	new file:   .vim/colors/kalisi.vim
+#	new file:   .vim/colors/molokai.vim
+#	new file:   .vim/colors/pencil.vim
+#	new file:   .vim/colors/tender.vim
+#	modified:   vimrc
+#

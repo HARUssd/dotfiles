@@ -9,6 +9,7 @@ set ignorecase
 set autoindent
 set incsearch
 set textwidth=80
+colorscheme molokai
 :syntax on
 "autocmd BufRead *.tex set formatoptions=q
 autocmd BufRead *.tex set tabstop=2
@@ -18,9 +19,6 @@ autocmd BufRead *.txt set formatoptions=q
 autocmd BufRead *.htm* set formatoptions=q
 autocmd BufRead *.bib set textwidth=1024
 autocmd BufRead *.py set expandtab
-if exists('&colorcolumn')
-	set colorcolumn=+1
-endif
 
 " encoding "
 set encoding=utf-8
@@ -66,3 +64,5 @@ augroup END
 vnoremap * "zy:let @/ = @z<CR>n
 set ts=4
 set sw=4
+
+hi Comment ctermfg=lightblue
