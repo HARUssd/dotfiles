@@ -1,5 +1,4 @@
 set tabstop=4
-set nu
 set shiftwidth=4
 set noexpandtab
 set showmatch
