@@ -17,7 +17,7 @@ autocmd BufRead *.txt set formatoptions=q
 autocmd BufRead *.htm* set formatoptions=q
 autocmd BufRead *.bib set textwidth=1024
 autocmd BufRead *.py set expandtab
-"autocmd BufRead *.sh colorscheme molokai
+autocmd BufRead *.sh colorscheme molokai
 if exists('&colorcolumn')
 	set colorcolumn=+1
 endif

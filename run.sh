@@ -1,5 +1,6 @@
 dir=~/dotfiles
 older=~/dotfiles_old
+vim_color=colors
 files="vimrc gitconfig bashrc"
 
 # Create dotfiles_old in homedir
@@ -13,7 +14,11 @@ echo "...done"
 for file in $files 
 do
     echo "Moving any existing dotfiles from ~ to $older"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/.$file $older
     echo "Creating symlink to $files in home directory"
     ln -snf $dir/$file ~/.$file
 done
+# make color scheme folder for vim
+echo "color scheme file create for vim"
+mkdir ~/.vim
+cp -ra $dir/$vim_color ~/.vim/
