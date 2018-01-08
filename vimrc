@@ -67,4 +67,6 @@ vnoremap * "zy:let @/ = @z<CR>n
 set ts=4
 set sw=4
 
+nmap <F3> <ESC>i#===========================================================<CR>#<CR>#<TAB><TAB>File    : <C-R>=expand("%")<CR><LF>#<TAB><TAB>Date    : <C-R>=strftime("%Y-%m-%d")<CR><LF>#<TAB><TAB>Author  : Haruki Shishido <CR>#<TAB><TAB><TAB><TAB><TAB>(shishido@ny.ics.keio.ac.jp)<CR>#<TAB><TAB>Version : 1.0.0<CR>#<CR>#===========================================================<CR><ESC>
+
 hi Comment ctermfg=lightblue
