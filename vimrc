@@ -7,6 +7,7 @@ set laststatus=2
 set ignorecase
 set autoindent
 set incsearch
+set number
 colorscheme elflord
 :syntax on
 "autocmd BufRead *.tex set formatoptions=q
