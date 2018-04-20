@@ -10,8 +10,17 @@ fi
 
 # User specific aliases and functions
 alias nyresp38="ssh -X shishido@nyresp38.ny.ics.keio.ac.jp"
+alias ls="ls --color=auto"
 alias l=ls
+alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
+alias llt="ls -lrt"
+alias llat="ls -lrat"
 alias ci=vi
 alias mail="ssh -L 9110:localhost:110 -L 9025:localhost:25 shishido@ny.ics.keio.ac.jp"
+
+# color 
+if type -P dircolors > /dev/null ; then
+	eval `dircolors $HOME/.dir_colors`
+fi
