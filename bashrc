@@ -18,9 +18,12 @@ alias lla="ls -la"
 alias llt="ls -lrt"
 alias llat="ls -lrat"
 alias ci=vi
+alias rm="rm -i"
 alias mail="ssh -L 9110:localhost:110 -L 9025:localhost:25 shishido@ny.ics.keio.ac.jp"
 
 # color 
 if type -P dircolors > /dev/null ; then
 	eval `dircolors $HOME/.dir_colors`
 fi
+alias cdd="cd ../"
+alias cddd="cd ../../"
