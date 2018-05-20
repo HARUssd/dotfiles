@@ -20,5 +20,7 @@ do
 done
 # make color scheme folder for vim
 echo "color scheme file create for vim"
-mkdir ~/.vim
+if [ ! -d "./.vim" ]; then
+	mkdir ~/.vim
+fi
 cp -ra $dir/$vim_color ~/.vim/
